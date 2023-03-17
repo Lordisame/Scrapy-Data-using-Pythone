@@ -32,7 +32,7 @@ class CrawlingSpider(CrawlSpider) :
 
         """
         Data is obtained inside <script id="__NEXT_DATA__" type="application/json">
-        """
+        """ 
 
         script = response.xpath('//script[@id="__NEXT_DATA__"]').get()
         if script is not None:
