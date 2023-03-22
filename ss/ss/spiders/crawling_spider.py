@@ -19,7 +19,7 @@ class CrawlingSpider(CrawlSpider) :
     
    
     rules = (
-        Rule(LinkExtractor(allow=("appartements/")), callback="parse_item", follow=True),
+        Rule(LinkExtractor(allow=("casablanca/appartements")), callback="parse_item", follow=True),
     )
   
     def get_all_links(self, links):
