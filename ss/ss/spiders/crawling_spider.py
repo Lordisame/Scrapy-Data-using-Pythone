@@ -14,7 +14,8 @@ class CrawlingSpider(CrawlSpider) :
     
     name ="mycrawler"
     allowed_domains = ["avito.ma"]
-    start_urls = ["https://www.avito.ma/fr/maroc/appartements?o={}".format(i) for i in range(1, 500)]
+    start_urls= ["https://www.avito.ma/fr/casablanca/immobilier-%C3%A0_vendre?o={}&price_min=300000&price_max=2000000".format(i) for i in range(1, 700)]
+
     
    
     rules = (
