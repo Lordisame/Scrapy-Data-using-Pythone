@@ -22,8 +22,10 @@ class Apartment(scrapy.Item):
     phone = Field()
     seller_name = Field()
     city = Field()
-    area = Field()
     description = Field()
+    habitable_size = Field()
+    floor = Field()
+    area = Field()
 
     #address = Field()
     #image_urls = Field()
