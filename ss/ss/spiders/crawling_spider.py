@@ -13,13 +13,12 @@ class CrawlingSpider(CrawlSpider) :
 
     
     name ="mycrawler"
-    allowed_domains = ["avito.ma"]
-    start_urls= ["https://www.avito.ma/fr/casablanca/immobilier-%C3%A0_vendre?o={}&price_min=300000&price_max=2000000".format(i) for i in range(1, 700)]
+    start_urls= ["https://www.avito.ma/fr/casablanca/immobilier-%C3%A0_vendre?o={}&price_min=300000&price_max=2000000".format(i) for i in range(1, 2)]
 
     
    
     rules = (
-        Rule(LinkExtractor(allow=("casablanca/appartements")), callback="parse_item", follow=True),
+        Rule(LinkExtractor(allow=("appartements","maisons_et_villas","bureaux_et_plateaux")), callback="parse_item", follow=True),
     )
   
     def get_all_links(self, links):
